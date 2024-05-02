@@ -6,8 +6,8 @@ import pickle
 st.title('RSaid')
 datos = pd.read_csv('hprice.csv')
 
-with open("C:\Users\oswaldo\OneDrive - Conconcreto\Escritorio\proyecto final\model.pickle", "rb") as f:
-    model = pickle.load(f)
+with open("model.pickle", "rb") as f:
+     model = pickle.load(f)
 
 st.subheader('assess')
 val_1=st.slider('Seleccione el valor',

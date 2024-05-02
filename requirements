@@ -2,5 +2,7 @@ pandas
 streamlit
 numpy
 scikit_learn
-catboost
+xgboost
 matplotlib
+pickle
+optuna

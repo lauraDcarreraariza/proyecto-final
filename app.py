@@ -5,8 +5,7 @@ import pickle
 
 st.title('RSaid')
 datos = pd.read_csv('hprice.csv')
-with open("model.pickle", "rb") as f:
-    model = pickle.load(f)
+
 st.subheader('assess')
 val_1=st.slider('Seleccione el valor',
           datos['assess'].min(),
@@ -26,6 +25,9 @@ val_4=st.slider('Seleccione el valor',
 st.subheader('colonial')
 val_5_selected=st.radio("¿Su casa es colonial?", ('Sí', 'No'))
 val_5 = 1 if val_5_selected == 'Sí' else 0
+
+with open("model.pickle", "rb") as f:
+    model = pickle.load(f)
 
 valores=np.array([[val_1,val_2,val_3,val_4,val_5]])
 

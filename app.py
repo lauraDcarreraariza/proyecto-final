@@ -3,7 +3,6 @@ import numpy as np
 import pandas as pd
 import pickle
 import xgboost as xgb
-import scipy as scp
 
 st.title('RSaid')
 datos = pd.read_csv('hprice.csv')

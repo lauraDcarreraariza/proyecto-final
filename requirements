@@ -4,5 +4,5 @@ numpy
 scikit_learn
 xgboost
 matplotlib
-model.pickle
+pickle
 optuna

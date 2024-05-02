@@ -28,8 +28,9 @@ val_5 = 1 if val_5_selected == 'Sí' else 0
 
 with open("model.pickle", "rb") as f:
     model = pickle.load(f)
+    resultado = model.predict(datos)
 
 valores=np.array([[val_1,val_2,val_3,val_4,val_5]])
 
-precio=model.predict(valores)
-st.write(precio)
+price=model.predict(valores)
+st.write(price)

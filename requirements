@@ -2,7 +2,7 @@ pandas
 streamlit
 numpy
 scikit_learn
-xgboost
 matplotlib
 pickle
 optuna
+xgboost

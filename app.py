@@ -4,13 +4,13 @@ import pandas as pd
 import xgboost as xgb
 import optuna
 import pickle
+from xgboost import XGBClassifier
 from sklearn.tree import DecisionTreeRegressor
 from sklearn.ensemble import GradientBoostingClassifier, HistGradientBoostingClassifier
 from sklearn.tree import DecisionTreeRegressor
 from sklearn.model_selection import GridSearchCV, train_test_split
 from sklearn.metrics import confusion_matrix, accuracy_score
 from sklearn.metrics import mean_squared_error
-from xgboost import XGBClassifier
 
 datos = pd.read_csv('hprice.csv')
 print(datos.head())

@@ -3,6 +3,5 @@ streamlit
 numpy
 scikit_learn
 matplotlib
-pickle
 optuna
 xgboost

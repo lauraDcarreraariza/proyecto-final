@@ -2,6 +2,7 @@ import streamlit as st
 import numpy as np
 import pandas as pd
 import xgboost as xgb
+import scipy as scp
 import optuna
 import pickle
 from sklearn.tree import DecisionTreeRegressor

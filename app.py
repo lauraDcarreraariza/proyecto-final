@@ -2,6 +2,8 @@ import streamlit as st
 import numpy as np
 import pandas as pd
 import pickle
+import xgboost as xgb
+import scipy as scp
 
 st.title('RSaid')
 datos = pd.read_csv('hprice.csv')
@@ -29,6 +31,8 @@ st.subheader('colonial')
 val_5_selected=st.radio("¿Su casa es colonial?", ('Sí', 'No'))
 val_5 = 1 if val_5_selected == 'Sí' else 0
 
+with open("model.pickle", "rb") as f:
+     model = pickle.load(f)
 valores=np.array([[val_1,val_2,val_3,val_4,val_5]])
 
 precio=model.predict(valores)
